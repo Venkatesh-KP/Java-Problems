@@ -1,0 +1,314 @@
+
+
+1. PrimeNoRange
+import java.util.*;
+public class PrimeNoRange {
+    public static void main(String[] args) {
+        int start = 10, end = 50;
+        for (int num = start; num <= end; num++) {
+            boolean isPrime = num > 1;
+            for (int i = 2; i * i <= num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime)
+            {
+                System.out.println(num + " is Prime");
+            }
+        }
+    }}
+
+2. LargestNumber
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter total numbers: ");
+        int n = sc.nextInt();
+        int largest = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter number: ");
+            int num = sc.nextInt();
+            if (num > largest) largest = num;
+        }
+
+        System.out.println("Largest number: " + largest);
+    }
+}
+
+3. PrimeRange
+public class PrimeRange {
+    public static void main(String[] args) {
+        int start = 10, end = 50;
+        for (int num = start; num <= end; num++) {
+            boolean isPrime = true;
+            if (num < 2) continue;
+            for (int i = 2; i * i <= num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) System.out.println(num);
+        }
+    }
+}
+
+4. Divisors
+public class Divisors {
+    public static void main(String[] args) {
+        int num = 28;
+        System.out.print("Divisors of " + num + ": ");
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) System.out.print(i + " ");
+        }
+    }
+}
+
+5. GCD_LCM
+public class GCD_LCM {
+    public static void main(String[] args) {
+        int a = 36, b = 60, gcd = 1;
+        for (int i = 1; i <= a && i <= b; i++)
+            if (a % i == 0 && b % i == 0)
+                gcd = i;
+        int lcm = (a * b) / gcd;
+        System.out.println("GCD: " + gcd + ", LCM: " + lcm);
+    }
+}
+
+6. PerfectNumber
+public class PerfectNumber {
+    public static boolean isPerfect(int num) {
+        int sum = 0;
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) sum += i;
+        }
+        return sum == num;
+    }
+
+    public static void main(String[] args) {
+        int start = 1, end = 1000;
+        for (int i = start; i <= end; i++) {
+            if (isPerfect(i)) System.out.println(i + " is a perfect number");
+        }
+    }
+}
+
+7. PerfectNumber
+import java.util.Scanner;
+
+public class NumberSign {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num > 0) System.out.println("Positive");
+        else if (num < 0) System.out.println("Negative");
+        else System.out.println("Zero");
+    }
+}
+
+8. TriangleType
+public class TriangleType {
+    public static void main(String[] args) {
+        int angle1 = 60, angle2 = 60, angle3 = 60;
+
+        if (angle1 + angle2 + angle3 != 180)
+            System.out.println("Not a valid triangle");
+        else if (angle1 == 90 || angle2 == 90 || angle3 == 90)
+            System.out.println("Right Triangle");
+        else if (angle1 < 90 && angle2 < 90 && angle3 < 90)
+            System.out.println("Acute Triangle");
+        else
+            System.out.println("Obtuse Triangle");
+    }
+}
+
+9. FibonacciCheck
+public class FibonacciCheck {
+    public static boolean isFibonacci(int num) {
+        int a = 0, b = 1, c;
+        while (a <= num) {
+            if (a == num) return true;
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int start = 1, end = 100;
+        for (int i = start; i <= end; i++) {
+            if (isFibonacci(i)) System.out.println(i + " is a Fibonacci number");
+        }
+    }
+}
+
+10. LeapYears
+public class LeapYears {
+    public static void main(String[] args) {
+        int start = 2000, end = 2050;
+        for (int year = start; year <= end; year++) {
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                System.out.println(year);
+            }
+        }
+    }
+}
+
+11. PalindromeCheck
+public class PalindromeCheck {
+    public static boolean isPalindrome(String str) {
+        str = str.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+        int left = 0, right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) return false;
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String str = "Madam";
+        System.out.println(isPalindrome(str) ? "Palindrome" : "Not a Palindrome");
+    }
+}
+
+12. PatternCheck
+public class PatternCheck {
+    public static void main(String[] args) {
+        String str = "HelloWorld";
+        if (str.startsWith("Hello")) System.out.println("Starts with Hello");
+        else System.out.println("Does not start with Hello");
+    }
+}
+
+13. DayCheck
+public class DayCheck {
+    public static void main(String[] args) {
+        String day = "Sunday";
+        day = day.toLowerCase();
+        if (day.equals("saturday") || day.equals("sunday")) 
+            System.out.println("Weekend");
+        else 
+            System.out.println("Weekday");
+    }
+}
+
+14. DivisibilityCheck
+public class DivisibilityCheck {
+    public static void main(String[] args) {
+        int num = 77;
+        if (num % 7 == 0 || num % 11 == 0)
+            System.out.println("Divisible by 7 or 11");
+        else
+            System.out.println("Not divisible by 7 or 11");
+    }
+}
+
+15. PrimeNested
+public class PrimeNested {
+    public static void main(String[] args) {
+        int start = 10, end = 50;
+        for (int num = start; num <= end; num++) {
+            boolean isPrime = true;
+            if (num < 2) continue;
+            for (int i = 2; i * i <= num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) System.out.println(num);
+        }
+    }
+}
+
+16. CharacterCheck
+public class CharacterCheck {
+    public static void main(String[] args) {
+        char ch = 'A';
+        if (Character.isUpperCase(ch)) System.out.println("Uppercase");
+        else if (Character.isLowerCase(ch)) System.out.println("Lowercase");
+        else System.out.println("Not an alphabet");
+    }
+}
+
+17. CreditCardCheck
+public class CreditCardCheck {
+    public static boolean isValidCreditCard(String cardNumber) {
+        int sum = 0;
+        boolean alternate = false;
+        for (int i = cardNumber.length() - 1; i >= 0; i--) {
+            int n = cardNumber.charAt(i) - '0';
+            if (alternate) {
+                n *= 2;
+                if (n > 9) n -= 9;
+            }
+            sum += n;
+            alternate = !alternate;
+        }
+        return sum % 10 == 0;
+    }
+
+    public static void main(String[] args) {
+        String cardNumber = "4532015112830366";
+        System.out.println(isValidCreditCard(cardNumber) ? "Valid Card" : "Invalid Card");
+    }
+}
+
+18. DateValidation
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
+public class DateValidation {
+    public static boolean isValidDate(String date) {
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDate.parse(date, formatter);
+            return true;
+        } catch (DateTimeParseException e) {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        String date = "2023-02-29";
+        System.out.println(isValidDate(date) ? "Valid Date" : "Invalid Date");
+    }
+}
+
+19. DayOfWeekFinder
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class DayOfWeekFinder {
+    public static void main(String[] args) {
+        String date = "2024-03-03";
+        LocalDate localDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        System.out.println("Day of the Week: " + localDate.getDayOfWeek());
+    }
+}
+
+20. MultiplicationTable
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        int num = 5;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+
+
+
+
