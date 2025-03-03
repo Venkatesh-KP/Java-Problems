@@ -2,7 +2,7 @@
 1. Positive_Negative
 import java.util.Scanner;
 
-public class Positive_Negative1 {
+public class Positive_Negative {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
@@ -20,7 +20,7 @@ public class Positive_Negative1 {
 2. OddOrEven2
 import java.util.Scanner;
 
-public class OddOrEven2 {
+public class OddOrEven {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
@@ -35,7 +35,7 @@ public class OddOrEven2 {
 3. DivisibleBy3And5
 import java.util.Scanner;
 
-public class DivisibleBy3And5_3 {
+public class DivisibleBy3And5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
@@ -50,7 +50,7 @@ public class DivisibleBy3And5_3 {
 4. GreatestOf3Num
 import java.util.Scanner;
 
-public class GreatestOf3Num4 {
+public class GreatestOf3Num {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a three numbers: ");
@@ -75,7 +75,7 @@ public class GreatestOf3Num4 {
 5. Prime
 import java.util.Scanner;
 
-public class Prime5 {
+public class Prime {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
@@ -91,5 +91,302 @@ public class Prime5 {
     }
 }
 
+6. LeapYear
+import java.util.Scanner;
 
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            System.out.println("Leap Year");
+        else
+            System.out.println("Not a Leap Year");
+    }
+}
+
+7. GreatestOf4Num
+import java.util.Scanner;
+
+public class GreatestOf4Num {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a four numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        if(a>b && a>c && a>d)
+        {
+            System.out.println("Largest :"+a);
+        }
+        else if(a<b && c<b && b>d)
+        {
+            System.out.println("Largest :"+b);
+        } else if (a<d && c<d && d>b)
+        {
+            System.out.println("Largest :"+d);
+        } else
+        {
+            System.out.println("Largest :"+c);
+        }
+    }
+}
+
+8. Palindrome
+import java.util.*;
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter number");
+        int n = input.nextInt();
+        int temp= n;
+        int rem=0;
+        int a=0;
+        while(n>0){
+            a = a * 10 + n % 10;
+            n = n / 10;
+        }
+        if(a==temp){
+            System.out.println("palindrome");
+        }
+        else{
+            System.out.println("not palindrome");
+        }
+    }
+}
+
+9. VowelConsonant
+public class VowelConsonant {
+    public static void main(String[] args) {
+        char ch = 'e';
+        if ("AEIOUaeiou".indexOf(ch) != -1)
+            System.out.println("Vowel");
+        else
+            System.out.println("Consonant");
+    }
+}
+
+10. SmallestOf3Num
+import java.util.*;
+public class SmallestOf3Num {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter 3 numbers");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+        if(b>a && c>a)
+        {
+            System.out.println(a+" is smaller");
+        }
+        else if(a>b && c>b)
+        {
+            System.out.println(b+" is smaller");
+        }
+        else
+        {
+            System.out.println(c+" is smaller");
+        }
+
+    }
+}
+
+11. PrimeOrNot
+import java.util.Scanner;
+public class PrimeOrNot {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int a=1;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                a=0;
+                break;
+            }
+        }
+        if(a!=0) {
+            System.out.println("Prime");
+        }
+        else
+        {
+            System.out.println("Not Prime");
+        }
+    }
+}
+
+12. PrimeOrNot
+import java.util.Scanner;
+public class PrimeOrNot {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int a=1;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                a=0;
+                break;
+            }
+        }
+        if(a!=0) {
+            System.out.println("Prime");
+        }
+        else
+        {
+            System.out.println("Not Prime");
+        }
+    }
+}
+
+13. Amstrong
+import java.util.*;
+class Amstrong {
+    public static void main(String[] args) {
+
+        Scanner input =new Scanner(System.in);
+        System.out.println("Enter number:");
+        int n= input.nextInt();
+        //int n =153;
+        int r,sum=0;
+        int temp=n;
+        int cube;
+        while(n>0){
+            r = n % 10;
+            cube=r*r*r;
+            sum=sum+cube;
+            n=n/10;}
+        System.out.println(sum);
+        if(sum==temp){
+            System.out.println("Amstrong");
+        }
+        else{
+            System.out.println("not Amstrong");
+        }
+    }
+}
+
+14. Factorial
+public class Factorial {
+    public static void main(String[] args)
+    {
+        int num=5;
+        System.out.println("Factorial :"+ fact(num));
+
+    }
+    public static int fact(int n)
+    {
+        if(n==1){   // base case
+            return 1;
+        }
+        return n * fact(n-1);   //recursive
+    }
+}
+
+15. Automorphic
+import java.util.Scanner;
+
+public class Automorphic {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = input.nextInt();
+        int sq = n * n;
+        boolean isAutomorphic = true;
+        int temp = n;
+        while (temp > 0) {
+            if (temp % 10 != sq % 10) {
+                isAutomorphic = false;
+                break;
+            }
+            temp = temp / 10;
+            sq = sq / 10;
+        }
+        if (isAutomorphic) {
+            System.out.println(n + " is an Automorphic number.");
+        } else {
+            System.out.println(n + " is not an Automorphic number.");
+        }
+    }
+}
+
+16. Fibonacci
+import java.util.*;
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter number:");
+        int n = input.nextInt();
+        int a=0, b=1;
+        int fib=0;
+        System.out.print("Fibonacci Series: ");
+        System.out.print(a+" ");
+        System.out.print(b+" ");
+        for (int i = 2; i <= n; i++) {
+            fib = a + b;
+            System.out.print(fib+ " ");
+            a = b;
+            b = fib;
+        }
+    }
+}
+
+17. PerfectSquareCheck
+public class PerfectSquareCheck {
+    public static boolean isPerfectSquare(int num) {
+        int sqrt = (int) Math.sqrt(num);
+        return (sqrt * sqrt == num);
+    }
+
+    public static void main(String[] args) {
+        int num = 25;
+        System.out.println(num + " is a perfect square: " + isPerfectSquare(num));
+    }
+}
+
+18. CountDigits
+public class CountDigits {
+    public static int countDigits(int num) {
+        return String.valueOf(Math.abs(num)).length();
+    }
+
+    public static void main(String[] args) {
+        int num = 12345;
+        System.out.println("Number of digits in " + num + " is: " + countDigits(num));
+    }
+}
+
+19. PalindromeCheck
+public class PalindromeCheck {
+    public static boolean isPalindrome(String str) {
+        String reversed = new StringBuilder(str).reverse().toString();
+        return str.equalsIgnoreCase(reversed);
+    }
+
+    public static void main(String[] args) {
+        String str = "madam";
+        System.out.println(str + " is a palindrome: " + isPalindrome(str));
+    }
+}
+
+20. AnagramCheck
+import java.util.Arrays;
+
+public class AnagramCheck {
+    public static boolean isAnagram(String str1, String str2) {
+        char[] arr1 = str1.toLowerCase().toCharArray();
+        char[] arr2 = str2.toLowerCase().toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        return Arrays.equals(arr1, arr2);
+    }
+
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+        System.out.println(str1 + " and " + str2 + " are anagrams: " + isAnagram(str1, str2));
+    }
+}
 
