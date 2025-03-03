@@ -1,0 +1,95 @@
+
+1. Positive_Negative
+import java.util.Scanner;
+
+public class Positive_Negative1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num > 0)
+            System.out.println("Positive");
+        else if (num < 0)
+            System.out.println("Negative");
+        else
+            System.out.println("Zero");
+    }
+}
+
+2. OddOrEven2
+import java.util.Scanner;
+
+public class OddOrEven2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        if (num % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+
+3. DivisibleBy3And5
+import java.util.Scanner;
+
+public class DivisibleBy3And5_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        if (num % 3 == 0 && num % 5 == 0)
+            System.out.println("Divisible by 3 and 5");
+        else
+            System.out.println("Not divisible by 3 and 5");
+    }
+}
+
+4. GreatestOf3Num
+import java.util.Scanner;
+
+public class GreatestOf3Num4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a three numbers: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        if(a>b&&a>c)
+        {
+            System.out.println("Largest :"+a);
+        }
+        else if(a<b&&c<b)
+        {
+            System.out.println("Largest :"+b);
+        }
+        else
+        {
+            System.out.println("Largest :"+c);
+        }
+    }
+}
+
+5. Prime
+import java.util.Scanner;
+
+public class Prime5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        boolean isPrime = num > 1;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        System.out.println(isPrime);
+    }
+}
+
+
+
