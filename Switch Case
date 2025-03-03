@@ -1,0 +1,222 @@
+1. SimpleCalculator
+import java.util.Scanner;
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter two values:");
+        int a = s.nextInt();
+        int b = s.nextInt();
+        System.out.println("Enter an operator (+, -, *, /, %):");
+        char c = s.next().charAt(0);
+        
+        switch (c) {
+            case '+':
+                System.out.println("Addition: " + (a + b));
+                break;
+            case '-':
+                System.out.println("Subtraction: " + (a - b));
+                break;
+            case '*':
+                System.out.println("Multiplication: " + (a * b));
+                break;
+            case '/':
+                System.out.println("Division: " + (a / b));
+                break;
+            case '%':
+                System.out.println("Modulus: " + (a % b));
+                break;
+            default:
+                System.out.println("Invalid Symbol");
+        }
+    }
+}
+
+2. NumberToWord
+import java.util.Scanner;
+
+public class NumberToWord {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number (1 to 10):");
+        int n = s.nextInt();
+
+        switch (n) {
+            case 1: System.out.println("ONE"); break;
+            case 2: System.out.println("TWO"); break;
+            case 3: System.out.println("THREE"); break;
+            case 4: System.out.println("FOUR"); break;
+            case 5: System.out.println("FIVE"); break;
+            case 6: System.out.println("SIX"); break;
+            case 7: System.out.println("SEVEN"); break;
+            case 8: System.out.println("EIGHT"); break;
+            case 9: System.out.println("NINE"); break;
+            case 10: System.out.println("TEN"); break;
+            default: System.out.println("Invalid Number");
+        }
+    }
+}
+
+3. DayOfWeek
+import java.util.Scanner;
+
+public class DayOfWeek {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the day number (1 to 7):");
+        int n = s.nextInt();
+
+        switch (n) {
+            case 1: System.out.println("SUNDAY"); break;
+            case 2: System.out.println("MONDAY"); break;
+            case 3: System.out.println("TUESDAY"); break;
+            case 4: System.out.println("WEDNESDAY"); break;
+            case 5: System.out.println("THURSDAY"); break;
+            case 6: System.out.println("FRIDAY"); break;
+            case 7: System.out.println("SATURDAY"); break;
+            default: System.out.println("Invalid Number");
+        }
+    }
+}
+
+4. NumberToRoman
+import java.util.Scanner;
+
+public class NumberToRoman {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a number (1 to 10):");
+        int n = s.nextInt();
+
+        switch (n) {
+            case 1: System.out.println("I"); break;
+            case 2: System.out.println("II"); break;
+            case 3: System.out.println("III"); break;
+            case 4: System.out.println("IV"); break;
+            case 5: System.out.println("V"); break;
+            case 6: System.out.println("VI"); break;
+            case 7: System.out.println("VII"); break;
+            case 8: System.out.println("VIII"); break;
+            case 9: System.out.println("IX"); break;
+            case 10: System.out.println("X"); break;
+            default: System.out.println("Invalid Number");
+        }
+    }
+}
+
+5. VendingMachine
+import java.util.Scanner;
+
+public class VendingMachine {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("WELCOME TO VENDING MACHINE");
+        System.out.println("1. Chips - $2");
+        System.out.println("2. Soda - $3");
+        System.out.println("3. Chocolate - $4");
+        System.out.println("4. Tea - $4");
+        System.out.println("5. Coffee - $6");
+        System.out.println("6. Exit");
+        System.out.println("Enter your choice:");
+
+        int choice = s.nextInt();
+        switch (choice) {
+            case 1: System.out.println("You selected Chips! Please pay $2"); break;
+            case 2: System.out.println("You selected Soda! Please pay $3"); break;
+            case 3: System.out.println("You selected Chocolate! Please pay $4"); break;
+            case 4: System.out.println("You selected Tea! Please pay $4"); break;
+            case 5: System.out.println("You selected Coffee! Please pay $6"); break;
+            case 6: System.out.println("** THANK YOU **"); break;
+            default: System.out.println("Invalid Input! Please select a valid choice.");
+        }
+    }
+}
+
+6. ReverseNumbers
+import java.util.Scanner;
+
+public class ReverseNumbers {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the value of n:");
+        int n = s.nextInt();
+
+        switch (1) {
+            case 1:
+                while (n > 0) {
+                    System.out.print(n + " ");
+                    n--;
+                }
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+    }
+}
+
+7. StudentGrade
+import java.util.Scanner;
+
+public class StudentGrade {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter your marks:");
+        int mark = s.nextInt();
+        int n = mark / 10;
+
+        switch (n) {
+            case 10:
+            case 9: System.out.println("Grade A"); break;
+            case 8: System.out.println("Grade B"); break;
+            case 7: System.out.println("Grade C"); break;
+            case 6: System.out.println("Grade D"); break;
+            case 5: System.out.println("Grade E"); break;
+            default:
+                if (mark >= 0 && mark < 50) {
+                    System.out.println("Fail");
+                } else {
+                    System.out.println("Invalid Marks");
+                }
+        }
+    }
+}
+
+8. TemperatureConverter
+import java.util.Scanner;
+
+public class TemperatureConverter {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Temperature Conversion Menu");
+        System.out.println("1. Celsius to Fahrenheit");
+        System.out.println("2. Fahrenheit to Celsius");
+        System.out.println("Enter your choice:");
+
+        int choice = s.nextInt();
+        switch (choice) {
+            case 1:
+                System.out.print("Enter temperature in Celsius: ");
+                double celsius = s.nextDouble();
+                double fahrenheit = (celsius * 9/5) + 32;
+                System.out.println("Temperature in Fahrenheit: " + fahrenheit + "°F");
+                break;
+            case 2:
+                System.out.print("Enter temperature in Fahrenheit: ");
+                double fi = s.nextDouble();
+                double co = (fi - 32) * 5/9;
+                System.out.println("Temperature in Celsius: " + co + "°C");
+                break;
+            default:
+                System.out.println("Invalid Option");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
