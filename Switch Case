@@ -212,9 +212,200 @@ public class TemperatureConverter {
     }
 }
 
+9. ConvertTemperature.java
+import java.util.Scanner;
+public class ConvertTemperature {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 1 for C to F, 2 for F to C:");
+        int opt = sc.nextInt();
+        System.out.println("Enter temperature:");
+        double temp = sc.nextDouble();
+        switch (opt) {
+            case 1:
+                System.out.println("Fahrenheit: " + (temp * 9 / 5 + 32));
+                break;
+            case 2:
+                System.out.println("Celsius: " + ((temp - 32) * 5 / 9));
+                break;
+            default:
+                System.out.println("Invalid option.");
+        }
+    }
+}
 
+10. FindDaysInMonth.java
+import java.util.Scanner;
+public class FindDaysInMonth {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter month number (1-12):");
+        int month = sc.nextInt();
+        switch (month) {
+            case 2:
+                System.out.println("28 or 29 days");
+                break;
+            case 4: case 6: case 9: case 11:
+                System.out.println("30 days");
+                break;
+            default:
+                System.out.println("31 days");
+        }
+    }
+}
 
+11. BankingSystem.java 
+import java.util.Scanner;
+public class BankingSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double balance = 1000;
+        System.out.println("1. Deposit\n2. Withdraw\n3. Check Balance");
+        int opt = sc.nextInt();
+        switch (opt) {
+            case 1:
+                System.out.println("Enter amount to deposit:");
+                balance += sc.nextDouble();
+                break;
+            case 2:
+                System.out.println("Enter amount to withdraw:");
+                balance -= sc.nextDouble();
+                break;
+            case 3:
+                System.out.println("Balance: " + balance);
+                break;
+            default:
+                System.out.println("Invalid choice.");
+        }
+    }
+}
 
+12. MonthName.java
+import java.util.Scanner;
+public class MonthName {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter month number:");
+        int month = sc.nextInt();
+        switch (month) {
+            case 1: System.out.println("January"); break;
+            case 2: System.out.println("February"); break;
+            case 3: System.out.println("March"); break;
+            case 4: System.out.println("April"); break;
+            case 5: System.out.println("May"); break;
+            case 6: System.out.println("June"); break;
+            case 7: System.out.println("July"); break;
+            case 8: System.out.println("August"); break;
+            case 9: System.out.println("September"); break;
+            case 10: System.out.println("October"); break;
+            case 11: System.out.println("November"); break;
+            case 12: System.out.println("December"); break;
+            default: System.out.println("Invalid month");
+        }
+    }
+}
+
+13. CalculateArea.java
+import java.util.Scanner;
+public class CalculateArea {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Choose shape: 1. Circle 2. Rectangle 3. Triangle");
+        int choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                System.out.println("Enter radius:");
+                double r = sc.nextDouble();
+                System.out.println("Area: " + (Math.PI * r * r));
+                break;
+            case 2:
+                System.out.println("Enter length and breadth:");
+                double l = sc.nextDouble(), b = sc.nextDouble();
+                System.out.println("Area: " + (l * b));
+                break;
+            case 3:
+                System.out.println("Enter base and height:");
+                double base = sc.nextDouble(), h = sc.nextDouble();
+                System.out.println("Area: " + (0.5 * base * h));
+                break;
+            default:
+                System.out.println("Invalid choice.");
+        }
+    }
+}
+
+14. ShoppingMenu.java
+import java.util.Scanner;
+public class ShoppingMenu {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1. Electronics\n2. Clothing\n3. Groceries");
+        int choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+                System.out.println("You selected Electronics.");
+                break;
+            case 2:
+                System.out.println("You selected Clothing.");
+                break;
+            case 3:
+                System.out.println("You selected Groceries.");
+                break;
+            default:
+                System.out.println("Invalid choice.");
+        }
+    }
+}
+
+15. ConvertTime.java
+import java.util.Scanner;
+public class ConvertTime {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter time in minutes:");
+        int minutes = sc.nextInt();
+        System.out.println(minutes / 60 + " hours and " + minutes % 60 + " minutes");
+    }
+}
+
+16. NumberToWord.java
+import java.util.Scanner;
+public class NumberToWord {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number (1-10):");
+        int num = sc.nextInt();
+        switch (num) {
+            case 1: System.out.println("One"); break;
+            case 2: System.out.println("Two"); break;
+            case 3: System.out.println("Three"); break;
+            case 4: System.out.println("Four"); break;
+            case 5: System.out.println("Five"); break;
+            case 6: System.out.println("Six"); break;
+            case 7: System.out.println("Seven"); break;
+            case 8: System.out.println("Eight"); break;
+            case 9: System.out.println("Nine"); break;
+            case 10: System.out.println("Ten"); break;
+            default: System.out.println("Invalid number");
+        }
+    }
+}
+
+17. TrafficLightSystem.java
+import java.util.Scanner;
+public class TrafficLightSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter light color (red, yellow, green):");
+        String color = sc.next().toLowerCase();
+        switch (color) {
+            case "red": System.out.println("Stop"); break;
+            case "yellow": System.out.println("Ready"); break;
+            case "green": System.out.println("Go"); break;
+            default: System.out.println("Invalid color");
+        }
+    }
+}
 
 
 
